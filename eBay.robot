@@ -15,3 +15,10 @@ Verify basic seach functionality
 
     HeaderPage.Input Search Text and Click Search    robot
     SearchResultsPage.Verify seach result    robot
+
+Verify basic seach functionality
+    Set Test Documentation    This test case verifies the basic search
+    Set Tags    Fuctional
+
+    HeaderPage.Input Search Text and Click Search    books
+    SearchResultsPage.Verify seach result    books
