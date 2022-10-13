@@ -2,7 +2,7 @@
 Library        Selenium2Library
 
 *** Variables ***
-${url}        https://www.ebay.com/
+${url}        https://booking.nokair.com/th/profile
 ${browser}    chrome
 
 *** Keywords ***
