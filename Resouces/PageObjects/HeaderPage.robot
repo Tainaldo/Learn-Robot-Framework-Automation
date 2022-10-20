@@ -2,8 +2,6 @@
 Library        Selenium2Library
 Variables      ../Webelements.py
 
-*** Variables ***
-
 *** Keywords ***
 Input Search Text and Click Search
     [Arguments]   ${search_text}

@@ -5,5 +5,4 @@
 Argument demo Keywords
     [Arguments]
 
-
 *** Test Cases ***

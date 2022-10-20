@@ -6,5 +6,5 @@ Test Setup      commonFunctionality.Start TestCase
 Test Teardown   commonFunctionality.Finish TestCase
 
 *** Test Cases ***
-TC Check
+TC Checkrobot test.robot
     commonTest.Check Textfield

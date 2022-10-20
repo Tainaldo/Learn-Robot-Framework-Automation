@@ -7,6 +7,8 @@ TC to demostrate Weblocators in Robot FW
 
     Open Browser    https://www.ebay.com/    chrome
     Maximize Browser Window
+
     Click Link    link:Seller Information Center
     Sleep    4s
+    
     Close Browser

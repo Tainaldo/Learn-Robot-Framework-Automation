@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20221020 16:37:57.389" rpa="false" schemaversion="3">
+<suite id="s1" name="WorkingWithLists" source="C:\Users\YHVM-SN-EN-010\Documents\GitHub\Learn-Robot-Framework-Automation\Travels\WorkingWithLists.robot">
+<test id="s1-t1" name="TC to demostrate Browser Operation Keywords in Robot Framework" line="9">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221020 16:37:57.530" level="INFO">Opening browser 'chrome' to base url 'https://www.sugarcrm.com/au/resources/crm-platform-demo/'.</msg>
+<status status="PASS" starttime="20221020 16:37:57.530" endtime="20221020 16:38:03.407"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221020 16:38:03.408" endtime="20221020 16:38:03.538"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221020 16:38:05.545" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221020 16:38:03.539" endtime="20221020 16:38:05.545"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name=email</arg>
+<arg>tyjaikla8794@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221020 16:38:05.546" level="INFO">Typing text 'tyjaikla8794@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20221020 16:38:05.545" endtime="20221020 16:38:05.643"/>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<arg>id=field1</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20221020 16:38:05.644" endtime="20221020 16:38:05.924"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221020 16:38:07.939" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221020 16:38:05.925" endtime="20221020 16:38:07.940"/>
+</kw>
+<kw name="Page Should Contain List" library="Selenium2Library">
+<arg>xpath=//div[@id='field27']/select</arg>
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<msg timestamp="20221020 16:38:07.978" level="INFO">Current page contains list 'xpath=//div[@id='field27']/select'.</msg>
+<status status="PASS" starttime="20221020 16:38:07.941" endtime="20221020 16:38:07.978"/>
+</kw>
+<kw name="Page Should Not Contain List" library="Selenium2Library">
+<arg>id=field272</arg>
+<doc>Verifies selection list ``locator`` is not found from current page.</doc>
+<msg timestamp="20221020 16:38:07.990" level="INFO">Current page does not contain list 'id=field272'.</msg>
+<status status="PASS" starttime="20221020 16:38:07.979" endtime="20221020 16:38:07.990"/>
+</kw>
+<kw name="Get List Items" library="Selenium2Library">
+<var>@{AllItems}</var>
+<arg>xpath=//select[@name='employees_c']</arg>
+<doc>Returns all labels or values of selection list ``locator``.</doc>
+<msg timestamp="20221020 16:38:08.142" level="INFO">@{AllItems} = [ Company Size* | 1 - 10 employees | 11 - 50 employees | 51 - 100 employees | 101 - 250 employees | 251 - 500 employees | 501 - 1,000 employees | 1,001 - 2,500 employees | 2,501 - 5,000 employees | 5,...</msg>
+<status status="PASS" starttime="20221020 16:38:07.991" endtime="20221020 16:38:08.142"/>
+</kw>
+<kw name="Get Selected List Label" library="Selenium2Library">
+<var>${ListLable}</var>
+<arg>xpath=//select[@name='employees_c']</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<msg timestamp="20221020 16:38:08.188" level="INFO">${ListLable} = Company Size*</msg>
+<status status="PASS" starttime="20221020 16:38:08.143" endtime="20221020 16:38:08.188"/>
+</kw>
+<kw name="Get Selected List Value" library="Selenium2Library">
+<var>${ListValue}</var>
+<arg>xpath=//select[@name='employees_c']</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<msg timestamp="20221020 16:38:08.229" level="INFO">${ListValue} = </msg>
+<status status="PASS" starttime="20221020 16:38:08.190" endtime="20221020 16:38:08.229"/>
+</kw>
+<kw name="List Selection Should Be" library="Selenium2Library">
+<arg>xpath=//select[@name='employees_c']</arg>
+<arg>Company Size*</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20221020 16:38:08.230" level="INFO">Verifying list 'xpath=//select[@name='employees_c']' has option [ Company Size* ] selected.</msg>
+<msg timestamp="20221020 16:38:08.244" level="INFO">Current page contains list 'xpath=//select[@name='employees_c']'.</msg>
+<status status="PASS" starttime="20221020 16:38:08.230" endtime="20221020 16:38:08.399"/>
+</kw>
+<kw name="Select From List By Index" library="Selenium2Library">
+<arg>xpath=//select[@name='employees_c']</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221020 16:38:08.400" level="INFO">Selecting options from selection list 'xpath=//select[@name='employees_c']' by index 1.</msg>
+<status status="PASS" starttime="20221020 16:38:08.399" endtime="20221020 16:38:08.456"/>
+</kw>
+<kw name="Get Selected List Label" library="Selenium2Library">
+<var>${LLabel1}</var>
+<arg>xpath=//select[@name='employees_c']</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<msg timestamp="20221020 16:38:08.500" level="INFO">${LLabel1} = 1 - 10 employees</msg>
+<status status="PASS" starttime="20221020 16:38:08.457" endtime="20221020 16:38:08.500"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221020 16:38:10.507" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221020 16:38:08.501" endtime="20221020 16:38:10.507"/>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<arg>xpath=//select[@name='employees_c']</arg>
+<arg>51 - 100 employees</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20221020 16:38:10.508" level="INFO">Selecting options from selection list 'xpath=//select[@name='employees_c']' by label 51 - 100 employees.</msg>
+<msg timestamp="20221020 16:38:10.708" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221020 16:38:10.709" level="FAIL">ElementNotInteractableException: Message: element not interactable: Element is not currently visible and may not be manipulated
+  (Session info: chrome=106.0.5249.119)
+</msg>
+<status status="FAIL" starttime="20221020 16:38:10.508" endtime="20221020 16:38:10.749"/>
+</kw>
+<kw name="Get Selected List Label" library="Selenium2Library">
+<var>${LLabel2}</var>
+<arg>xpath=//select[@name='employees_c']</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.750" endtime="20221020 16:38:10.750"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.751" endtime="20221020 16:38:10.751"/>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<arg>xpath=//select[@name='employees_c']</arg>
+<arg>level5</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.751" endtime="20221020 16:38:10.751"/>
+</kw>
+<kw name="Get Selected List Value" library="Selenium2Library">
+<var>${LLabel3}</var>
+<arg>xpath=//select[@name='employees_c']</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.751" endtime="20221020 16:38:10.751"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.751" endtime="20221020 16:38:10.751"/>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<arg>url=https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select_multiple</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.751" endtime="20221020 16:38:10.751"/>
+</kw>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>id=iframeResult</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.751" endtime="20221020 16:38:10.751"/>
+</kw>
+<kw name="Select All From List" library="Selenium2Library">
+<arg>id=cars</arg>
+<doc>Selects all options from multi-selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.751" endtime="20221020 16:38:10.751"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Get Selected List Labels" library="Selenium2Library">
+<var>@{ListLabls}</var>
+<arg>id=cars</arg>
+<doc>Returns labels of selected options from selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Unselect From List By Value" library="Selenium2Library">
+<arg>id=cars</arg>
+<arg>audi</arg>
+<doc>Unselects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Unselect From List By Index" library="Selenium2Library">
+<arg>id=cars</arg>
+<arg>1</arg>
+<doc>Unselects options from selection list ``locator`` by ``indexes``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Unselect From List By Label" library="Selenium2Library">
+<arg>id=cars</arg>
+<arg>Volvo</arg>
+<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.752"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.752" endtime="20221020 16:38:10.753"/>
+</kw>
+<kw name="Get Selected List Values" library="Selenium2Library">
+<var>@{ListValues}</var>
+<arg>id=cars</arg>
+<doc>Returns values of selected options from selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.753" endtime="20221020 16:38:10.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.753" endtime="20221020 16:38:10.753"/>
+</kw>
+<kw name="Unselect All From List" library="Selenium2Library">
+<arg>id=cars</arg>
+<doc>Unselects all options from multi-selection list ``locator``.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.753" endtime="20221020 16:38:10.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.753" endtime="20221020 16:38:10.753"/>
+</kw>
+<kw name="List Should Have No Selections" library="Selenium2Library">
+<arg>id=cars</arg>
+<doc>Verifies selection list ``locator`` has no options selected.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.753" endtime="20221020 16:38:10.753"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20221020 16:38:10.753" endtime="20221020 16:38:10.753"/>
+</kw>
+<doc>TC to demostrate list Operation Keywords</doc>
+<status status="FAIL" starttime="20221020 16:37:57.529" endtime="20221020 16:38:10.754">ElementNotInteractableException: Message: element not interactable: Element is not currently visible and may not be manipulated
+  (Session info: chrome=106.0.5249.119)
+</status>
+</test>
+<status status="FAIL" starttime="20221020 16:37:57.390" endtime="20221020 16:38:10.755"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="WorkingWithLists">WorkingWithLists</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
