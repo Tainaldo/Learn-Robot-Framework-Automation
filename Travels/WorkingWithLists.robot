@@ -17,13 +17,15 @@ TC to demostrate Browser Operation Keywords in Robot Framework
     Scroll Element Into View    id=field1
 
     Sleep    2s
-    Page Should Contain List        xpath=//div[@id='field27']/select
+    Page Should Contain List        xpath=//*[@id="field27"]/select
     Page Should Not Contain List    id=field272
 
     @{AllItems}=     Get List Items             xpath=//select[@name='employees_c']
     ${ListLable}=    Get Selected List Label    xpath=//select[@name='employees_c']
     ${ListValue}=    Get Selected List Value    xpath=//select[@name='employees_c']
 
+
+    Sleep    1s
     List Selection Should Be    xpath=//select[@name='employees_c']    Company Size*
 
     Select From List By Index    xpath=//select[@name='employees_c']    1
