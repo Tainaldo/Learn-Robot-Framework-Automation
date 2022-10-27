@@ -16,6 +16,7 @@ TC to demostrate Browser Operation Keywords in Robot Framework
 
     Scroll Element Into View    id=field1
 
+#   เช็คว่ามี/ไม่มี List ในหน้านั้นไหม
     Sleep    2s
     Page Should Contain List        xpath=//*[@id="field27"]/select
     Page Should Not Contain List    id=field272
